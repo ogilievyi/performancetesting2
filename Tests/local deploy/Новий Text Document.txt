@@ -1,0 +1,12 @@
+1
+select 
+(select count(*) as Parsed from raw where Status = 1) as Parsed,
+(select count(*) as New from raw where Status = 0) as New
+
+ 2
+ select count(*), dateadd(mi, datediff(mi, 0, CreatedOn), 0)  as time from Person (nolock)group by  dateadd(mi, datediff(mi, 0, CreatedOn), 0) 
+  
+ 3
+select count(*)/datediff(mi, min(createdOn),max(createdon)) from person (nolock)
+   
+ 

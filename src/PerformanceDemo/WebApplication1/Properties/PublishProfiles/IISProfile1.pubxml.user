@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword />
+    <History>True|2023-09-27T20:43:44.3861930Z;True|2023-09-27T23:40:18.6778055+03:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="db">
+      <Value>Server=127.0.0.1%3bDatabase=demo%3bUser Id=sa%3bPassword=Password+%3bMultipleActiveResultSets=True%3bConnection Timeout=30%3bMax Pool Size=1000%3bPooling=true%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

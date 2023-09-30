@@ -1,0 +1,1 @@
+docker run --name wiremock -p 8080:8080 wiremock/wiremock
