@@ -1,0 +1,14 @@
+ARG Version=0.0.0
+FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
+EXPOSE 80
+
+FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
+ARG Version
+COPY . /Build
+WORKDIR /Build
+RUN dotnet publish ./WebApplication1/WebApplication1.csproj -c Release -o /tmp/app /p:Version=$Version
+
+FROM base AS final
+WORKDIR /app
+COPY --from=build /tmp/app .
+ENTRYPOINT ["dotnet", "WebApplication1.dll"]

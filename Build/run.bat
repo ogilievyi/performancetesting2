@@ -1,2 +1,4 @@
 docker run -d --cpus="1" --name api -p 8989:80 --link rabbit -e ConnectionStrings__rmq="amqp://user:pass@rabbit:5672/" public-api:1
 docker run -d --cpus="1" --name worker --link mssql --link rabbit -e ConnectionStrings__db="Server=mssql;Database=demo;User Id=sa;Password=Password+;MultipleActiveResultSets=True;Connection Timeout=30;Max Pool Size=1000;Pooling=true;" -e ConnectionStrings__rmq="amqp://user:pass@rabbit:5672/" worker:1
+
+docker run  --cpus="1" --name monolith  --link mssql -p 98:80 -e timeoutSecond=1 -e _batchCount=10   -e ConnectionStrings__db="Server=mssql;Database=demo;User Id=sa;Password=Password+;MultipleActiveResultSets=True;Connection Timeout=30;Max Pool Size=1000;Pooling=true;" monolith:1
