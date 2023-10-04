@@ -1,0 +1,2 @@
+param($wc1Cpu, $mssqlContainerName, $rabbitMqContainerName)
+docker run -d --cpus="$wc1Cpu" --name wc1 -p 8990:80 --link $mssqlContainerName --link $rabbitMqContainerName -e ConnectionStrings__db="Server=$mssqlContainerName;Database=demo;User Id=sa;Password=Password+;MultipleActiveResultSets=True;Connection Timeout=30;Max Pool Size=1000;Pooling=true;" -e ConnectionStrings__rmq="amqp://user:pass@$($rabbitMqContainerName):5672/" worker:1 

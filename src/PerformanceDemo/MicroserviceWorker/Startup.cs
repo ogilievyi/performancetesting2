@@ -51,14 +51,14 @@ public class Startup
 
 	public void Configure(IApplicationBuilder app, IWebHostEnvironment env) {
 		InitLog4NetPath();
-		var log = LogManager.GetLogger(GetType());
+        var log = LogManager.GetLogger(GetType());
 		new DemoConsumer(Configuration, new RmqConnectionProvider(Configuration).Connection, log);
 		SpinWait.SpinUntil(() => false);
 	}
 
 	public void ConfigureServices(IServiceCollection services) {
 		services.AddSingleton(Configuration);
-		services.AddLogging(c => {
+        services.AddLogging(c => {
 			c.ClearProviders();
 			c.AddLog4Net();
 		});
