@@ -17,6 +17,11 @@ CREATE TABLE [dbo].[Account](
 	[AccountName] [nvarchar](50) NOT NULL
 ) ON [PRIMARY]
 GO
+INSERT INTO [dbo].[Account] ([Id] ,[Uri] ,[AccountName]) VALUES ('m1', 'http://monolith:80', 'm1')
+GO
+INSERT INTO [dbo].[Account] ([Id] ,[Uri] ,[AccountName]) VALUES ('wiremock', 'http://wiremock:8080', 'wiremock')
+GO
+
 
 
 CREATE TABLE [dbo].[Raw](
