@@ -5,5 +5,5 @@ timeout 60
 docker run -d --name=grafana -p 3000:3000 --link mssql grafana/grafana-enterprise
 
 docker run -d --cpus="1" --name s1 -p 8989:80 --link rabbit -e ConnectionStrings__rmq="amqp://user:pass@rabbit:5672/" rockf3ller/s1
-docker run -d --cpus="1" --name wc1 --link mssql --link rabbit --link wiremock -e PrefetchCount=5000 -e ConnectionStrings__db="Server=mssql;Database=demo;User Id=sa;Password=Password+;MultipleActiveResultSets=True;Connection Timeout=30;Max Pool Size=1000;Pooling=true;" -e ConnectionStrings__rmq="amqp://user:pass@rabbit:5672/" rockf3ller/wc1
 docker run -d --cpus="1" --name monolith -p 98:80 --link mssql -e timeoutSecond=30 -e _batchCount=100 -e ConnectionStrings__db="Server=mssql;Database=demo;User Id=sa;Password=Password+;MultipleActiveResultSets=True;Connection Timeout=30;Max Pool Size=1000;Pooling=true;" rockf3ller/monolith
+docker run -d --cpus="1" --name wc1 --link mssql --link rabbit --link wiremock --link monolith -e PrefetchCount=5000 -e ConnectionStrings__db="Server=mssql;Database=demo;User Id=sa;Password=Password+;MultipleActiveResultSets=True;Connection Timeout=30;Max Pool Size=1000;Pooling=true;" -e ConnectionStrings__rmq="amqp://user:pass@rabbit:5672/" rockf3ller/wc1
