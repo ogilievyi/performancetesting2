@@ -7,6 +7,6 @@ select
  select count(*), dateadd(mi, datediff(mi, 0, CreatedOn), 0)  as time from Person (nolock)group by  dateadd(mi, datediff(mi, 0, CreatedOn), 0) 
   
  3
-select count(*)/datediff(mi, min(createdOn),max(createdon)) from person (nolock)
+select 60*count(*)/(datediff(second, min(createdOn),max(createdon))) from person (nolock)
    
  
