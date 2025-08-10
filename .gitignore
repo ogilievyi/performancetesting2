@@ -13,3 +13,7 @@
 /src/PerformanceDemo/RmqClient/obj
 /src/PerformanceDemo/WebApplication1/bin/Debug/net6.0
 /src/PerformanceDemo/WebApplication1/obj
+
+# Temporary files
+*.deb
+*.tmp
