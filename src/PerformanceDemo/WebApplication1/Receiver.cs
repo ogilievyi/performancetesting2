@@ -1,6 +1,6 @@
 ﻿namespace WebApplication1;
 
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 using System.Text;
 using log4net;
 using Microsoft.AspNetCore.Mvc;

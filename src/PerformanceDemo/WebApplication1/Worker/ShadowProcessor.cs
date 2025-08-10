@@ -1,7 +1,7 @@
 ﻿namespace WebApplication1.Worker;
 
 using log4net;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 using System.Text;
 using System.Text.Json;
 
