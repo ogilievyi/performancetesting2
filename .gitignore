@@ -6,10 +6,14 @@
 /src/PerformanceDemo/.vs
 /src/PerformanceDemo/MicroservicePublicApi/obj
 /src/PerformanceDemo/MicroservicePublicApi/bin/Debug/net6.0
+/src/PerformanceDemo/MicroservicePublicApi/bin/Debug/net8.0
 /src/PerformanceDemo/MicroserviceWorker/bin/Debug/net6.0
+/src/PerformanceDemo/MicroserviceWorker/bin/Debug/net8.0
 /src/PerformanceDemo/MicroserviceWorker/obj
 /src/PerformanceDemo/PerformanceDemo/obj
 /src/PerformanceDemo/RmqClient/bin/Debug/net6.0
+/src/PerformanceDemo/RmqClient/bin/Debug/net8.0
 /src/PerformanceDemo/RmqClient/obj
 /src/PerformanceDemo/WebApplication1/bin/Debug/net6.0
+/src/PerformanceDemo/WebApplication1/bin/Debug/net8.0
 /src/PerformanceDemo/WebApplication1/obj
