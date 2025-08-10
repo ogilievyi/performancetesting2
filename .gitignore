@@ -2,21 +2,43 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/.vs
-/src/PerformanceDemo/.vs
-/src/PerformanceDemo/MicroservicePublicApi/obj
-/src/PerformanceDemo/MicroservicePublicApi/bin/Debug/net6.0
-/src/PerformanceDemo/MicroservicePublicApi/bin/Debug/net8.0
-/src/PerformanceDemo/MicroserviceWorker/bin/Debug/net6.0
-/src/PerformanceDemo/MicroserviceWorker/bin/Debug/net8.0
-/src/PerformanceDemo/MicroserviceWorker/obj
-/src/PerformanceDemo/PerformanceDemo/obj
-/src/PerformanceDemo/RmqClient/bin/Debug/net6.0
-/src/PerformanceDemo/RmqClient/bin/Debug/net8.0
-/src/PerformanceDemo/RmqClient/obj
-/src/PerformanceDemo/WebApplication1/bin/Debug/net6.0
-/src/PerformanceDemo/WebApplication1/bin/Debug/net8.0
-/src/PerformanceDemo/WebApplication1/obj
+# Visual Studio directories and files
+.vs/
+*.user
+*.suo
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+
+# .NET build outputs
+*.dll
+*.pdb
+*.exe
+*.deps.json
+*.runtimeconfig.json
+*.runtimeconfig.dev.json
+
+# NuGet packages
+*.nupkg
+**/packages/*
+!**/packages/build/
+*.nuget.props
+*.nuget.targets
+
+# Test Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+TestResult.xml
 
 # Temporary files
 *.deb
