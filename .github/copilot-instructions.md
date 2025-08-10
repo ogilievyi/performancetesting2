@@ -122,6 +122,7 @@ Set up required services using Docker containers:
 - **ALWAYS run** `dotnet build` before committing changes
 - Verify no new errors are introduced (warnings about System.Data.SqlClient are expected)
 - **NEVER** ignore build errors - only vulnerability warnings are acceptable
+- **Build artifacts**: The .gitignore excludes bin/ and obj/ directories - do not commit these to version control
 
 ## Common Tasks
 
