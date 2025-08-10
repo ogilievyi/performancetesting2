@@ -1,6 +1,6 @@
 ﻿namespace MicroserviceWorker;
 
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 using System.Text.Json;
 using log4net;
 using Microsoft.Extensions.Configuration;
